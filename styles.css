@@ -1,0 +1,144 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     overflow-x: hidden;
+     background-color: rgba(51, 51, 51, 0.301);
+     color: #222;
+}
+
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 100px 50px;
+}
+
+.container.show__nav {
+    transform: rotate(-20deg);
+    
+}
+
+.circle__container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+   
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(82, 117, 150);
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s linear;
+}
+
+.container.show__nav .circle {
+transform: rotate(-70deg);
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+    cursor: pointer;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    cursor: pointer;
+
+}
+
+.dog {
+    max-width: 500px;
+    
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    margin: 30px 0;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+nav {
+
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-left: 40px;
+
+}
+
+nav a {
+    padding-bottom: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(82, 117, 150);
+    transform: translateX(-100%);
+    transition: 0.4s ease-in;
+
+}
+
+
+nav a i {
+    margin-right: 5px;
+}
+
+nav a + a {
+    margin-left: 10px;
+    transform: translateX(-150%);
+}
+nav a + a + a {
+    margin-left: 20px;
+    transform: translateX(-200%);
+}
+
+.container.show__nav + nav a {
+    transform: translateX(0);
+    transition-delay: 0.3s
+
+}
+
+
+
+
+
+nav a:hover {
+    color: grey;
+    transition: 0.2s ease;
+}
+
+
+
+
+
